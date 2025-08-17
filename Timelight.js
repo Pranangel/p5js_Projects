@@ -4,3 +4,7 @@ let CLOCK_DIAMETER = 400;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight)
+}
