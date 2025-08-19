@@ -29,3 +29,4 @@ function drawClock() {
   line(-((CLOCK_DIAMETER/2)-10), 0, -CLOCK_DIAMETER/2, 0) //11:00
 }
 
+function draw() {}
