@@ -29,4 +29,10 @@ function drawClock() {
   line(-((CLOCK_DIAMETER/2)-10), 0, -CLOCK_DIAMETER/2, 0) //11:00
 }
 
-function draw() {}
+function draw() {
+  push();
+  translate(floor(windowWidth/2),floor(windowHeight/2));
+  drawClock();
+  pop();
+}
+
