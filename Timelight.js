@@ -9,7 +9,6 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight)
 }
 
-
 function drawClock(color = 0) {
   push();
 
@@ -43,11 +42,14 @@ function drawClock(color = 0) {
   pop();
 }
 
+function calcRadianTime() {}
+
 function draw() {
   push();
   translate(floor(windowWidth/2),floor(windowHeight/2));
   drawClock();
   pop();
 }
+
 
 
