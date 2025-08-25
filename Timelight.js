@@ -42,7 +42,14 @@ function drawClock(color = 0) {
   pop();
 }
 
-function calcRadianTime() {}
+function calcRadianTime() {
+  let date = new Date();
+
+  let hours     = date.getHours();
+  let minutes   = date.getMinutes();
+  let seconds   = date.getSeconds();
+  let milliSec  = date.getMilliseconds();
+}
 
 function draw() {
   push();
@@ -50,6 +57,7 @@ function draw() {
   drawClock();
   pop();
 }
+
 
 
 
