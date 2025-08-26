@@ -49,6 +49,10 @@ function calcRadianTime() {
   let minutes   = date.getMinutes();
   let seconds   = date.getSeconds();
   let milliSec  = date.getMilliseconds();
+  
+  let totalTimeMillisec = (hours*3600000) + (minutes*60000) + (seconds*1000) + (milliSec);
+  let hoursMilliSec     = totalTimeMillisec / 3600000;
+  let minutesMilliSec   = (hoursMilliSec - floor(hoursMilliSec)) * 60;
 }
 
 function draw() {
@@ -57,6 +61,7 @@ function draw() {
   drawClock();
   pop();
 }
+
 
 
 
