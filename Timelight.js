@@ -53,6 +53,14 @@ function calcRadianTime() {
   let totalTimeMillisec = (hours*3600000) + (minutes*60000) + (seconds*1000) + (milliSec);
   let hoursMilliSec     = totalTimeMillisec / 3600000;
   let minutesMilliSec   = (hoursMilliSec - floor(hoursMilliSec)) * 60;
+
+  if (hoursMilliSec > 12) {
+    blackWhiteGradient = 255 - (255 * ((hoursMilliSec - 12) / 12));
+    return [TWO_PI*(hoursMilliSec-12)/12, TWO_PI*minutesMilliSec/60]; //date.getHours() returns up to 24 hours, so 12 hours have to be subtracted if it's past noon
+  }
+  blackWhiteGradient = 255 * ((hoursMilliSec) / 12);
+  return [TWO_PI*hoursMilliSec/12, TWO_PI*minutesMilliSec/60];
+
 }
 
 function draw() {
@@ -61,6 +69,7 @@ function draw() {
   drawClock();
   pop();
 }
+
 
 
 
