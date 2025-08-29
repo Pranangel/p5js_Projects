@@ -63,7 +63,15 @@ function calcRadianTime() {
 
 }
 
-function drawTimeHands() {}
+function drawTimeHands() {
+  let hourHandRotate   = 0;
+  let minuteHandRotate = 0;
+  
+  calcs = calcRadianTime();
+  hourHandRotate = calcs[0] + PI;
+  minuteHandRotate = calcs[1] + PI;
+
+}
 
 function draw() {
   push();
@@ -71,6 +79,7 @@ function draw() {
   drawClock();
   pop();
 }
+
 
 
 
