@@ -71,6 +71,15 @@ function drawTimeHands() {
   hourHandRotate = calcs[0] + PI;
   minuteHandRotate = calcs[1] + PI;
 
+  //drawing the hour hand and rotating it
+  rotate(hourHandRotate);
+  stroke(color);
+  line(0,0,0,(CLOCK_DIAMETER/2)-100);
+
+  //drawing the minute hand and rotating it
+  rotate(-hourHandRotate + minuteHandRotate); //previous angle has to be subtracted b/c rotate() is cumulative for each call
+  stroke(color);
+  line(0,0,0,(CLOCK_DIAMETER/2)-50);
 }
 
 function draw() {
@@ -79,6 +88,7 @@ function draw() {
   drawClock();
   pop();
 }
+
 
 
 
