@@ -85,10 +85,11 @@ function drawTimeHands() {
 function draw() {
   push();
   translate(floor(windowWidth/2),floor(windowHeight/2));
-  drawClock();
-  drawTimeHands();
+  drawClock(blackWhiteGradient);
+  drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
