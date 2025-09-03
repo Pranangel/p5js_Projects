@@ -63,7 +63,7 @@ function calcRadianTime() {
 
 }
 
-function drawTimeHands() {
+function drawTimeHands(color = 0) {
   let hourHandRotate   = 0;
   let minuteHandRotate = 0;
   
@@ -89,6 +89,7 @@ function draw() {
   drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
