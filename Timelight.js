@@ -10,6 +10,9 @@ function windowResized() {
 }
 
 function drawClock(color = 0) {
+  let quarterHourTickLength = 40;
+  let otherHourTickLength = 10;
+  
   push();
 
   if (color == abs(255-color)) {
@@ -89,6 +92,7 @@ function draw() {
   drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
