@@ -1,10 +1,12 @@
 let blackWhiteGradient = 0;
-let CLOCK_DIAMETER = 400;
+let CLOCK_DIAMETER     = 400;
 
 /* useLocalTime toggles the art piece between using local time or (seizure-inducing) CPU clock time
      for drawing the background and clock's colors. Set to false at your own discretion.
 */
 let useLocalTime = true;
+let angleMeasure = 0;
+let cycleCount   = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -97,6 +99,7 @@ function draw() {
   drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
