@@ -101,6 +101,21 @@ function drawTimeHands(color = 0) {
   rotate(-hourHandRotate + minuteHandRotate); //previous angle has to be subtracted b/c rotate() is cumulative for each call
   stroke(color);
   line(0,0,0,(CLOCK_DIAMETER/2)-50);
+     
+  if (useLocalTime == false) {
+    angleMeasure += (PI/24);
+  
+    if (angleMeasure >= 2*(TWO_PI)) {
+      angleMeasure = 0;
+      cycleCount++;
+    }
+    if (cycleCount % 2 == 1) {
+      blackWhiteGradient -= PI/24;
+    }
+    else {
+      blackWhiteGradient += PI/24;
+    }
+  }
 }
 
 function draw() {
@@ -110,6 +125,7 @@ function draw() {
   drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
