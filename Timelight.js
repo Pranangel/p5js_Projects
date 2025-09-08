@@ -76,6 +76,17 @@ function calcRadianTime() {
 function drawTimeHands(color = 0) {
   let hourHandRotate   = 0;
   let minuteHandRotate = 0;
+
+  if (useLocalTime == true) {
+    calcs = calcRadianTime();
+    hourHandRotate = calcs[0] + PI;
+    minuteHandRotate = calcs[1] + PI;
+  }
+  //automated calculation
+  else {
+    hourHandRotate = angleMeasure;
+    minuteHandRotate = (hourHandRotate)*3;
+  }
   
   calcs = calcRadianTime();
   hourHandRotate = calcs[0] + PI;
@@ -99,6 +110,7 @@ function draw() {
   drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
