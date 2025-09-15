@@ -89,10 +89,6 @@ function drawTimeHands(color = 0) {
   }
 
   push();
-     
-  calcs = calcRadianTime();
-  hourHandRotate = calcs[0] + PI;
-  minuteHandRotate = calcs[1] + PI;
 
   //drawing the hour hand and rotating it
   rotate(hourHandRotate);
@@ -130,6 +126,7 @@ function draw() {
   drawTimeHands(blackWhiteGradient);
   pop();
 }
+
 
 
 
