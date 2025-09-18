@@ -124,8 +124,19 @@ function draw() {
   translate(floor(windowWidth/2),floor(windowHeight/2));
   drawClock(blackWhiteGradient);
   drawTimeHands(blackWhiteGradient);
+  if (useLocalTime == true) {
+    //Between 120 and 130 the screen looks more or less gray, so this is a workaround
+    if (120 <= blackWhiteGradient && blackWhiteGradient <= 130) {
+    background(blackWhiteGradient+5);  
+    drawClock(blackWhiteGradient);
+    drawTimeHands(blackWhiteGradient-5);
+    }
+
+  }
+     
   pop();
 }
+
 
 
 
