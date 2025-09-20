@@ -125,17 +125,20 @@ function draw() {
   drawClock(blackWhiteGradient);
   drawTimeHands(blackWhiteGradient);
   if (useLocalTime == true) {
-    //Between 120 and 130 the screen looks more or less gray, so this is a workaround
+    //Between 120 and 130 the entire screen is gray, and it's hard to
+     //  differentiate the background from the clock. Spacing the
+     //  color of the time hands, the clock, and the background
+     //  out by 5 pixels will allow for a bit better visibility.
     if (120 <= blackWhiteGradient && blackWhiteGradient <= 130) {
     background(blackWhiteGradient+5);  
     drawClock(blackWhiteGradient);
     drawTimeHands(blackWhiteGradient-5);
     }
-
   }
      
   pop();
 }
+
 
 
 
