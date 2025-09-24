@@ -134,10 +134,17 @@ function draw() {
     drawClock(blackWhiteGradient);
     drawTimeHands(blackWhiteGradient-5);
     }
+
+    else {
+      background(blackWhiteGradient);  
+      drawClock(blackWhiteGradient);
+      drawTimeHands(blackWhiteGradient);
+    }
   }
      
   pop();
 }
+
 
 
 
