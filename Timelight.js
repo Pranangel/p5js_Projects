@@ -141,9 +141,15 @@ function draw() {
       drawTimeHands(blackWhiteGradient);
     }
   }
+  else {
+    background((255 * blackWhiteGradient) / (4 * PI));  
+    drawClock((255 * blackWhiteGradient) / (4 * PI));
+    drawTimeHands((255 * blackWhiteGradient) / (4 * PI));
+  }
      
   pop();
 }
+
 
 
 
